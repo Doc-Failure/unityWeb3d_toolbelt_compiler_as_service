@@ -9,6 +9,7 @@ pipeline {
     stages {
         stage("init") {
             steps {
+                echo 'init'
                 /* script {
                    gv = load "script.groovy" 
                 } */
@@ -16,6 +17,7 @@ pipeline {
         }
         stage("build") {
             steps {
+                echo 'building'
                 /* script {
                     gv.buildApp()
                 } */
@@ -26,15 +28,18 @@ pipeline {
                 expression {
                     params.executeTests
                 }
-            }
+            }*/
             steps {
-                script {
+
+                echo 'test'
+               /*  script {
                     gv.testApp()
-                }
-            } */
+                } */
+            } 
         }
         stage("deploy") {
             steps {
+                echo 'deploy'
                 /* script {
                     gv.deployApp()
                 } */
