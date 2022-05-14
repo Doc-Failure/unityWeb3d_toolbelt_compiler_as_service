@@ -1,28 +1,28 @@
-def gv
+/* def gv */
 
 pipeline {
     agent any
-    parameters {
+  /*   parameters {
         choice(name: 'VERSION', choices: ['1.1.0', '1.2.0', '1.3.0'], description: '')
         booleanParam(name: 'executeTests', defaultValue: true, description: '')
-    }
+    } */
     stages {
         stage("init") {
             steps {
-                script {
+                /* script {
                    gv = load "script.groovy" 
-                }
+                } */
             }
         }
         stage("build") {
             steps {
-                script {
+                /* script {
                     gv.buildApp()
-                }
+                } */
             }
         }
         stage("test") {
-            when {
+            /* when {
                 expression {
                     params.executeTests
                 }
@@ -31,13 +31,13 @@ pipeline {
                 script {
                     gv.testApp()
                 }
-            }
+            } */
         }
         stage("deploy") {
             steps {
-                script {
+                /* script {
                     gv.deployApp()
-                }
+                } */
             }
         }
     }   
