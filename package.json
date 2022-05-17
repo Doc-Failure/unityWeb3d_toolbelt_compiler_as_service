@@ -27,6 +27,7 @@
     "rinkeby:verify": "hardhat --network rinkeby etherscan-verify --solc-input",
     "rinkeby:export": "hardhat --network rinkeby export --export exports/rinkeby.json",
     "goerli:deploy": "hardhat --network goerli deploy",
+    "bsc_testnet:deploy": "hardhat --network bsc_testnet deploy",
     "goerli:verify": "hardhat --network goerli etherscan-verify --solc-input",
     "goerli:export": "hardhat --network goerli export --export exports/goerli.json",
     "kovan:deploy": "hardhat --network kovan deploy",

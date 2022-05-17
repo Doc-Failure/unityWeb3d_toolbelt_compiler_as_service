@@ -191,7 +191,7 @@ const config: HardhatUserConfig = {
       live: true,
       saveDeployments: true,
     },
-    "bsc-testnet": {
+    bsc_testnet: {
       url: "https://data-seed-prebsc-2-s3.binance.org:8545",
       accounts,
       chainId: 97,
