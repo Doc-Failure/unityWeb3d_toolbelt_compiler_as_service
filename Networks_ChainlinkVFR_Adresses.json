@@ -1,5 +1,6 @@
 [
     {
+        "ChainId":137,
         "Network":"Polygon (Matic) Mainnet",
         "LINK_Token":"0xb0897686c545045aFc77CF20eC7A532E3120E0F1",
         "VRF_Coordinator":"0x3d2341ADb2D31f1c5530cDC622016af293177AE0",
@@ -7,6 +8,7 @@
         "Fee":"0.0001"
     },
     {
+        "ChainId":80001,
         "Network":"Polygon (Matic) Mumbai Testnet",
         "LINK_Token":"0x326C977E6efc84E512bB9C30f76E30c160eD06FB",
         "VRF_Coordinator":"0x8C7382F9D8f56b33781fE506E897a4F1e2d17255",
@@ -14,6 +16,7 @@
         "Fee":"0.0001"
     },
     {
+        "ChainId":56,
         "Network":"BNB Chain Mainnet",
         "LINK_Token":"0x404460C6A5EdE2D891e8297795264fDe62ADBB75",
         "VRF_Coordinator":"0x747973a5A2a4Ae1D3a8fDF5479f1514F65Db9C31",
@@ -21,6 +24,7 @@
         "Fee":"0.2"
     },
     {
+        "ChainId":97,
         "Network":"BNB Chain Testnet",
         "LINK_Token":"0x84b9B910527Ad5C03A9Ca831909E21e236EA7b06",
         "VRF_Coordinator":"0xa555fC018435bef5A13C6c6870a9d4C11DEC329C",
@@ -28,6 +32,7 @@
         "Fee":"0.1"
     },
     {
+        "ChainId":1,
         "Network":"Ethereum Mainnet",
         "LINK_Token":"0x514910771AF9Ca656af840dff83E8264EcF986CA",
         "VRF_Coordinator":"0xf0d54349aDdcf704F77AE15b96510dEA15cb7952",
@@ -35,6 +40,7 @@
         "Fee":"2"
     },
     {
+        "ChainId":42,
         "Network":"Kovan",
         "LINK_Token":"0xa36085F69e2889c224210F603D836748e7dC0088",
         "VRF_Coordinator":"0xdD3782915140c8f3b190B5D67eAc6dc5760C46E9",
@@ -42,6 +48,7 @@
         "Fee":"0.1"
     },
     {
+        "ChainId":4,
         "Network":"Rinkeby",
         "LINK_Token":"0x01BE23585060835E02B77ef475b0Cc51aA1e0709",
         "VRF_Coordinator":"0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B",
