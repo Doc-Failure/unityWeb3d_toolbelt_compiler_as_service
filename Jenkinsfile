@@ -2,7 +2,7 @@
 
 pipeline {
     agent {
-        docker { image 'node:16.13.1-alpine' }
+        docker { image 'node:14.18.2' }
     }
   /*   parameters {
         choice(name: 'VERSION', choices: ['1.1.0', '1.2.0', '1.3.0'], description: '')
@@ -12,7 +12,8 @@ pipeline {
         stage("init") {
             steps {
                 echo 'init'
-                sh 'node --version'
+                sh 'npm install' 
+                sh 'npm run generate NOME \'GOLD,SILVER,SWORD\' http://www.google.com 20 10' 
                 /* script {
                    gv = load "script.groovy" 
                 } */
@@ -21,6 +22,7 @@ pipeline {
         stage("build") {
             steps {
                 echo 'building'
+                sh 'npm run build' 
                 //docker run -v /local/path:/sources ethereum/solc:stable -o /sources/output --abi --bin /sources/Contract.sol
                 /* script {
                     gv.buildApp()
