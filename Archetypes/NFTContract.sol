@@ -14,7 +14,7 @@ import "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol";
  * Key Hash: 0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311
  */
 contract NFTContract is ERC1155, VRFConsumerBase {
-    string public name = $NAME;
+    string public name = "$NAME";
     using SafeMath for uint256;
     bytes32 internal keyHash;
     uint256 internal fee;
@@ -24,7 +24,7 @@ contract NFTContract is ERC1155, VRFConsumerBase {
     address public LinkToken;
     // rinkeby: 0x01BE23585060835E02B77ef475b0Cc51aA1e0709a
 
-    $FIELDS
+$FIELDS
   /*   uint256 public constant GOLD = 0;
     uint256 public constant SILVER = 1;
     uint256 public constant SWORD = 2;
@@ -47,7 +47,7 @@ contract NFTContract is ERC1155, VRFConsumerBase {
             "$URL/{id}.json"
         )
     {
-        $MINT_FIELDS
+$MINT_FIELDS
         /* _mint(address(this), GOLD, 0, "");
         _mint(address(this), SILVER, 0, "");
         _mint(address(this), SWORD, 0, "");
@@ -74,10 +74,10 @@ contract NFTContract is ERC1155, VRFConsumerBase {
         override
     {
         //we have a 50% chances of receive some resources
-        randomResult = randomNumber * $CHANCES / 100;
+        randomResult = randomNumber % 100;
         //if we mined some resources we receive 5 of them
-        uint256 quantity = randomResult > 0 ? 5 : 0;
+        uint256 quantity = randomResult > $CHANCES ? $QUANTITY : 0;
 
-        _mint(requestToSender[requestId], requestToItem[requestId], 10, "");
+        _mint(requestToSender[requestId], requestToItem[requestId], quantity, "");
     }
 }
