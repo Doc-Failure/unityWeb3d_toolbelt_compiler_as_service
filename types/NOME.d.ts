@@ -20,7 +20,7 @@ import { BytesLike } from "@ethersproject/bytes";
 import { Listener, Provider } from "@ethersproject/providers";
 import { FunctionFragment, EventFragment, Result } from "@ethersproject/abi";
 
-interface NFTContractInterface extends ethers.utils.Interface {
+interface NOMEInterface extends ethers.utils.Interface {
   functions: {
     "GOLD()": FunctionFragment;
     "LinkToken()": FunctionFragment;
@@ -153,7 +153,7 @@ interface NFTContractInterface extends ethers.utils.Interface {
   getEvent(nameOrSignatureOrTopic: "URI"): EventFragment;
 }
 
-export class NFTContract extends Contract {
+export class NOME extends Contract {
   connect(signerOrProvider: Signer | Provider | string): this;
   attach(addressOrName: string): this;
   deployed(): Promise<this>;
@@ -164,7 +164,7 @@ export class NFTContract extends Contract {
   removeAllListeners(eventName: EventFilter | string): this;
   removeListener(eventName: any, listener: Listener): this;
 
-  interface: NFTContractInterface;
+  interface: NOMEInterface;
 
   functions: {
     GOLD(overrides?: CallOverrides): Promise<[BigNumber]>;
