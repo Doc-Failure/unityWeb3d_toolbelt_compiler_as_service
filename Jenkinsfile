@@ -46,6 +46,7 @@ pipeline {
         stage("deploy") {
             steps {
                 echo 'deploy'
+                sh 'npm run  aurora_testnet:deploy' 
                 /* script {
                     gv.deployApp()
                 } */
