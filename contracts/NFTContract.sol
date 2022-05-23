@@ -42,7 +42,8 @@ contract NFTContract is ERC1155, VRFConsumerBase {
         address _LinkToken,
         bytes32 _keyhash,
         // 1 is the equivalent of 0.1 LINK
-        uint8 _fees
+        // 1 should be the equivalent of 0.0001 LINK
+        uint16 _fees
     )
         public
         VRFConsumerBase(_VRFCoordinator, _LinkToken)
@@ -61,7 +62,7 @@ contract NFTContract is ERC1155, VRFConsumerBase {
         VRFCoordinator = _VRFCoordinator;
         LinkToken = _LinkToken;
         keyHash = _keyhash;
-        fee = _fees ** 18;
+        fee = _fees/10000 ** 18;
     }
 
     function redeemResources(uint256 itemId) public returns (bytes32) {

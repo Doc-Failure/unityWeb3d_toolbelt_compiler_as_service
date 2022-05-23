@@ -53,7 +53,7 @@ contract NFTContract is ERC1155, VRFConsumerBase {
         VRFCoordinator = _VRFCoordinator;
         LinkToken = _LinkToken;
         keyHash = _keyhash;
-        fee = _fees ** 18;
+        fee = _fees/10000 ** 18;
     }
 
     function redeemResources(uint256 itemId) public returns (bytes32) {

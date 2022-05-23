@@ -1,6 +1,6 @@
 //{ ethers, deployments, getNamedAccounts }
 module.exports = async function ({ ethers, deployments, getNamedAccounts }) {
-
+  const chainId = await getChainId()
   const { deploy } = deployments
   const { deployer, dev } = await getNamedAccounts()
 
@@ -14,7 +14,7 @@ module.exports = async function ({ ethers, deployments, getNamedAccounts }) {
 
   const networks = JSON.parse(networkInFile);
   const network = networks.filter((elem)=>{ 
-    if(elem.ChainId== process.env.NETWORK_ID)
+    if(elem.ChainId == chainId)
       return elem
     });
   VRF_Coordinator=network[0].VRF_Coordinator;

@@ -39,7 +39,8 @@ $FIELDS
         address _LinkToken,
         bytes32 _keyhash,
         // 1 is the equivalent of 0.1 LINK
-        uint8 _fees
+        // 1 should be the equivalent of 0.0001 LINK
+        uint16 _fees
     )
         public
         VRFConsumerBase(_VRFCoordinator, _LinkToken)

@@ -633,8 +633,8 @@
       ]
     },
     "/Users/conve/Project/unityWeb3d_toolbelt_compiler_as_service/contracts/NFTContract.sol": {
-      "lastModificationDate": 1652866557382,
-      "contentHash": "f87daebd3ab232abd35476b98348bb4c",
+      "lastModificationDate": 1653296480290,
+      "contentHash": "eda28bd13cda0de8c31c597f97f6f7d6",
       "sourceName": "contracts/NFTContract.sol",
       "solcConfig": {
         "version": "0.6.12",
