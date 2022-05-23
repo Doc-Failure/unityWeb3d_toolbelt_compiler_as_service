@@ -8,13 +8,17 @@ pipeline {
         //choice(name: 'VERSION', choices: ['1.1.0', '1.2.0', '1.3.0'], description: '')
         //booleanParam(name: 'executeTests', defaultValue: true, description: '')
         text(name: 'NAME', defaultValue: 'test', description: 'Enter the name of the contract')
+        text(name: 'TOKENS_LIST', defaultValue: '', description: 'Enter the tokens separated by ,')
+        text(name: 'IPFS_ENDPOINT', defaultValue: '', description: 'Enter address of the metadata resources')
+        text(name: 'MINTING_PROBABILITY', defaultValue: '0', description: 'Enter Probability to mint a token')
+        text(name: 'MINTING_QUANTITY', defaultValue: '0', description: 'Enter the quantity to mint')
     }
     stages {
         stage("init") {
             steps {
                 echo 'init'
                 sh 'npm install' 
-                sh 'npm run generate ${params.NAME} \'GOLD,SILVER,SWORD\' http://www.google.com 20 10' 
+                sh "npm run generate \"${params.NAME}\" '\"${params.TOKENS_LIST}\"' \"${params.IPFS_ENDPOINT}\" \"${params.MINTING_PROBABILITY}\" \"${params.MINTING_QUANTITY}\"" 
             }
         }
         stage("build") {
