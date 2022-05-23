@@ -18,7 +18,7 @@ import { HardhatUserConfig } from "hardhat/types"
 import { removeConsoleLog } from "hardhat-preprocessor"
 
 const accounts = {
-  mnemonic: process.env.MNEMONIC || "test test test test test test test test test test test junk",
+  mnemonic: process.env.MNEMONIC || "hurdle slice east vendor trust hood typical broccoli face armed render country",
   // accountsBalance: "990000000000000000000",
 }
 
