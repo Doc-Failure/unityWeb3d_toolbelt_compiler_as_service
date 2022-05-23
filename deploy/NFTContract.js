@@ -3,7 +3,8 @@ module.exports = async function ({ ethers, deployments, getNamedAccounts }) {
   const chainId = await getChainId()
   const { deploy } = deployments
   const { deployer, dev } = await getNamedAccounts()
-
+  console.log("deployer: "+deployer);
+  console.log("dev: "+dev);
   var VRF_Coordinator="";
   var LINK_Token="";
   var Key_Hash="";
