@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo 'init'
                 sh 'npm install' 
-                sh "npm run generate \"${params.NAME}\" '\"${params.TOKENS_LIST}\"' \"${params.IPFS_ENDPOINT}\" \"${params.MINTING_PROBABILITY}\" \"${params.MINTING_QUANTITY}\"" 
+                sh "npm run generate \"${params.NAME}\" \"${params.TOKENS_LIST}\" \"${params.IPFS_ENDPOINT}\" \"${params.MINTING_PROBABILITY}\" \"${params.MINTING_QUANTITY}\"" 
             }
         }
         stage("build") {
