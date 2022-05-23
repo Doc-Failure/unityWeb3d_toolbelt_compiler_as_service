@@ -12,6 +12,7 @@ pipeline {
         text(name: 'IPFS_ENDPOINT', defaultValue: '', description: 'Enter address of the metadata resources')
         text(name: 'MINTING_PROBABILITY', defaultValue: '0', description: 'Enter Probability to mint a token')
         text(name: 'MINTING_QUANTITY', defaultValue: '0', description: 'Enter the quantity to mint')
+        text(name: 'CHAIN_ID', defaultValue: '0', description: 'Enter the Chain ID')
     }
     stages {
         stage("init") {
