@@ -45,7 +45,7 @@ $FIELDS
         public
         VRFConsumerBase(_VRFCoordinator, _LinkToken)
         ERC1155(
-            "$URL/{id}.json"
+            "$URL/meta_ID_{id}.json"
         )
     {
 $MINT_FIELDS
