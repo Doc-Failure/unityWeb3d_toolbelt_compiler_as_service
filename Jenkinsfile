@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo 'init'
                 sh 'npm install' 
-                sh 'npm run generate NOME \'GOLD,SILVER,SWORD\' http://www.google.com 20 10' 
+                sh 'npm run generate $.NAME \'GOLD,SILVER,SWORD\' http://www.google.com 20 10' 
             }
         }
         stage("build") {
