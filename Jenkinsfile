@@ -36,10 +36,11 @@ pipeline {
         stage("deploy") {
             steps {
                 echo 'deploy'
-                if(${params.CHAIN_ID}==97)
+                if (${params.CHAIN_ID}==97){
                     sh "npm run bsc_testnet:deploy"
-                else if(${params.CHAIN_ID}==4)
+                }else if (${params.CHAIN_ID}==4){
                     sh "npm run rinkeby:deploy"
+                }
             }
         }
     }   
