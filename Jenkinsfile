@@ -18,6 +18,7 @@ pipeline {
         stage("init") {
             steps {
                 echo 'init'
+                sh 'export INFURA_API_KEY=f8abcb045ed64fb0a51b1e67ec54888d'
                 sh 'npm install' 
                 sh "npm run generate \"${params.NAME}\" \"${params.TOKENS_LIST}\" \"${params.IPFS_ENDPOINT}\" \"${params.MINTING_PROBABILITY}\" \"${params.MINTING_QUANTITY}\"" 
             }
@@ -37,9 +38,10 @@ pipeline {
             steps {
                 echo 'deploy'
                  script {
-                    if (params.CHAIN_ID==97){
+                    if (params.CHAIN_ID=="97"){
                         sh "npm run bsc_testnet:deploy"
-                    }else if (params.CHAIN_ID==4){
+                    }
+                    if (params.CHAIN_ID=="4"){
                             sh "npm run rinkeby:deploy"
                     }
                  }
