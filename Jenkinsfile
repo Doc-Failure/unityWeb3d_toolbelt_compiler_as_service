@@ -46,7 +46,7 @@ pipeline {
                     }
 
                     if (params.CHAIN_ID=="80001"){
-                            sh "npm run polygon:deploy"
+                            sh "npm run mumbai:deploy"
                     }
                     sh "curl -X 'POST' \
                             'https://api.nft.storage/upload' \
