@@ -39,6 +39,7 @@
     "moonbase:deploy": "hardhat --network moonbase deploy",
     "moonbase:export": "hardhat --network moonbase export --export exports/moonbase.json",
     "arbitrum:deploy": "hardhat --network arbitrum deploy",
+    "mumbai:deploy": "hardhat --network mumbai deploy",
     "arbitrum:export": "hardhat --network arbitrum export --export exports/arbitrum.json",
     "export": "hardhat export --export-all exports/deployments.json",
     "test": "hardhat test --verbose",
