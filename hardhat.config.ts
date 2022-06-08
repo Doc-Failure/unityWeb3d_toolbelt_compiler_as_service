@@ -168,14 +168,15 @@ const config: HardhatUserConfig = {
       live: true,
       saveDeployments: true,
     },
-    mumbai: {
-      url: "https://rpc-mumbai.maticvigil.com/",
+    mumbai: { 
+      url: "https://matic-mumbai.chainstacklabs.com",
       accounts,
       chainId: 80001,
       live: true,
       saveDeployments: true,
       tags: ["staging"],
       gasMultiplier: 2,
+      gasPrice: 8000000000, // default is 'auto' which breaks chains without the london hardfork
     },
     xdai: {
       url: "https://rpc.xdaichain.com",
