@@ -52,7 +52,7 @@ pipeline {
                             'https://api.nft.storage/upload' \
                             -H 'accept: application/json' \
                             -H 'Content-Type: */*' \
-                            -H 'Authorization: Bearer WyIweGE0NzhkMGIwZDA5NTc2MDVlZTliYTBhNWFmN2I2YWE1YTM3ZTkyNjYzOWJmYjgzZWFjMDBlNzc0NGI2YjllODQ3NjkyODY3ZTdlMTlkYjhlNzkxNjIwOTRkYjM3MjU0NjZhMjk0MjQyY2E3YTczY2ZlMTgyYzhkMWJiYzU3MjBmMWIiLCJ7XCJpYXRcIjoxNjUzNjY3Mjc2LFwiZXh0XCI6MTY1MzY3NDQ3NixcImlzc1wiOlwiZGlkOmV0aHI6MHhCOUUxMjBhYUY0MjFjRjcyYjcwMThFN2VBZUQ5YzVmMDkwREQ2MThkXCIsXCJzdWJcIjpcIm9tbDVXR2pkVjFSN1ZSOG40UHl2SDN3b0pVNXFLbW94WjBHTGlOMEJKN0k9XCIsXCJhdWRcIjpcIlpvYmw1QzJHRWVvT1dudXdpb0RURDRBSnd1NlhFTW5WSEttWjZWOFZZLUU9XCIsXCJuYmZcIjoxNjUzNjY3Mjc2LFwidGlkXCI6XCJkODI5ZmQ3Yi1hODJjLTQzMmMtYmYxMC1kYjcxYTRmNThmZThcIixcImFkZFwiOlwiMHgwZjkyOGEzOGFhNTAwMTYzNjc4NTMwNzQyM2FhMDU3NzRlZGM5ZGE0NmQ0MmUyOWYzNTMzMTcxNGJjYjM0NjI0NTQ4MDE2N2RkMjIyMTgzNzA2ODMwMzYwNTVlZTFkNTVlY2MwZDAzNGYzODE2MGM1OTlmZDljM2NjNjQyYTUyYzFiXCJ9Il0=' \
+                            -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweEI5RTEyMGFhRjQyMWNGNzJiNzAxOEU3ZUFlRDljNWYwOTBERDYxOGQiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY1Mjk3MDQxNDgwMCwibmFtZSI6IlVuaXR5V2ViMyJ9.8gBlTY7DiGTi2yulLTI6qawpdnQLtqDRJFLgsohMrt0' \
                             --data-binary '@deployments/bsc_testnet/NFTContract.json'"
                  }
             }
