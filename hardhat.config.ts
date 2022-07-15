@@ -56,6 +56,13 @@ const config: HardhatUserConfig = {
     },
   },
   networks: {
+
+    BTT_testnet: {
+      url: 'https://pre-rpc.bt.io/',
+      accounts,
+      chainId: 1029,
+      gasPrice: 4000000000000,
+    },
     theta_testnet: {
       url: 'https://eth-rpc-api-testnet.thetatoken.org/rpc',
       accounts,
